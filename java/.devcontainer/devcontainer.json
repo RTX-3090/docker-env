@@ -1,0 +1,32 @@
+{
+  "name": "java",
+  "image": "maven:3.8-openjdk-11",
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "gabrielbb.vscode-lombok"
+  ],
+  "forwardPorts": [
+    8080
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "java.home": "/usr/local/openjdk-11",
+    "maven.executable.path": "/usr/share/maven/bin/mvn",
+    "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
+    },
+    "java.configuration.runtimes": [
+      {
+        "default": true,
+        "name": "JavaSE-11",
+        "path": "/usr/local/openjdk-11",
+        "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api",
+        "sources": "/usr/local/openjdk-11/lib/src.zip"
+      }
+    ],
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/root/.vscode-server/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  }
+}

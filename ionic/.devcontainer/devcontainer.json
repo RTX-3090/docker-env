@@ -1,0 +1,15 @@
+{
+  "name": "ionic",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "extensions": [
+    "loiane.ionic-extension-pack"
+  ],
+  "forwardPorts": [
+    8080
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/sh"
+  }
+}
